@@ -21,5 +21,71 @@
       "providerPlugin": "awscloudformation",
       "service": "AppSync"
     }
+  },
+  "function": {
+    "nextamplifiedc87eb7a1": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamob6a75918"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "nextamplifiedfdf10158": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_nextamplifiedc87eb7a1_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nextamplifiedc87eb7a1"
+        }
+      ]
+    },
+    "AMPLIFY_function_nextamplifiedc87eb7a1_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nextamplifiedc87eb7a1"
+        }
+      ]
+    },
+    "AMPLIFY_function_nextamplifiedfdf10158_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nextamplifiedfdf10158"
+        }
+      ]
+    },
+    "AMPLIFY_function_nextamplifiedfdf10158_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nextamplifiedfdf10158"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "dynamob6a75918": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
   }
 }

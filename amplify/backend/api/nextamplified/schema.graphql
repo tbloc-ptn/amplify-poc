@@ -7,8 +7,26 @@ type User @model @auth(rules: [{allow: public}]) {
 
 type Todo @model @auth(rules: [{allow: public}]) {
   id: ID!
-  name: String!
+  name: OnBoarding!
   description: String
   userID: ID! @index(name: "byUser")
 }
  
+
+type Post{
+  id: ID!
+  title: String
+  description: String
+  views: Int
+}
+
+type Query {
+  listPosts: [Post] @http(url: "https://www.example.com/posts")
+  	getOnBoarding: [OnBoarding] @http(url: "https://o3yl489t18.execute-api.ap-southeast-1.amazonaws.com/dev/hamo-onboarding/information")
+}
+
+type OnBoarding {
+	image: String
+	step: Int
+	title: String
+}

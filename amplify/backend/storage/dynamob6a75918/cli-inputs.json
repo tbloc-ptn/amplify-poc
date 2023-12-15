@@ -1,0 +1,10 @@
+{
+  "resourceName": "dynamob6a75918",
+  "tableName": "dynamob6a75918",
+  "partitionKey": {
+    "fieldName": "if",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
